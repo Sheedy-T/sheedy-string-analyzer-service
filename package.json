@@ -1,0 +1,24 @@
+{
+  "name": "string-analyzer-service",
+  "version": "1.0.0",
+  "description": "Backend Wizards Stage 1 Task: String Analyzer RESTful API.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js" 
+  },
+  "keywords": [
+    "express",
+    "api",
+    "backend-wizards"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2", 
+    "body-parser": "^1.20.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}
