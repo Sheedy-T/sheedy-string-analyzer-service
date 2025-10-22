@@ -189,7 +189,10 @@ app.delete('/strings/:stringValue', (req, res) => {
 // Export app for testing
 module.exports = app;
 
-// Run directly
+// ✅ Railway: listen on the provided PORT and 0.0.0.0
 if (require.main === module) {
-  app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+  const PORT = process.env.PORT || 8080;
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`✅ Server is running on port ${PORT}`);
+  });
 }
