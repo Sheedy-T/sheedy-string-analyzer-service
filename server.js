@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const { analyzeString } = require('./services/analyzer');  // ✅ fixed path
-const storage = require('./services/storage');             // ✅ fixed path
+const { analyzeString } = require('./analyzer');  // ✅ fixed path
+const storage = require('./storage');             // ✅ fixed path
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => {
     res.status(200).json({ message: 'String Analyzer API is running 🚀' });
   });
-  
+
 // Helper for standardized error messages
 const sendError = (res, status, message) => {
   res.status(status).json({ error: message });
