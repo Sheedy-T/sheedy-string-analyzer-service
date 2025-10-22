@@ -8,6 +8,10 @@ const PORT = process.env.PORT || 3001;
 
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+    res.status(200).json({ message: 'String Analyzer API is running 🚀' });
+  });
+  
 // Helper for standardized error messages
 const sendError = (res, status, message) => {
   res.status(status).json({ error: message });
